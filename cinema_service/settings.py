@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+from django.conf import settings
 from pathlib import Path
+from django.core.files.storage import default_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -57,7 +57,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "cinema_service.urls"
-
 
 TEMPLATES = [
     {
@@ -141,3 +140,6 @@ DEBUG_TOOLBAR_CONFIG = {
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+storage = default_storage
+default_file_storage = settings.DEFAULT_FILE_STORAGE
