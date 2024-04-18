@@ -14,7 +14,9 @@ from cinema.views import (
 )
 
 router = routers.DefaultRouter()
-router.register("genres", GenreViewSet)
+router.register("Genres", GenreViewSet)
+router.register("Movie", MovieViewSet)
+router.register("CinemaHall", CinemaHallViewSet)
 
 movie_session_list = MovieSessionViewSet.as_view(
     actions={"get": "list", "post": "create"}

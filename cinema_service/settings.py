@@ -141,5 +141,4 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-storage = default_storage
 default_file_storage = settings.DEFAULT_FILE_STORAGE
